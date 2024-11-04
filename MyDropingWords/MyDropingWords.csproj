@@ -40,8 +40,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
+appapp
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
@@ -61,11 +60,15 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.92" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.10" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Compile Update="Pages\AddNewWordPage.xaml.cs">
 	    <DependentUpon>AddNewWordPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\DictionaryPage.xaml.cs">
+	    <DependentUpon>DictionaryPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -73,6 +76,13 @@
 	  <MauiXaml Update="Pages\AddNewWordPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\DictionaryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\AppIcon\photo.svg" />
 	</ItemGroup>
 
 </Project>

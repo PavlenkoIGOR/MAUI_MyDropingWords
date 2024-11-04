@@ -2,7 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyDropingWords.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Headline" TargetType="Label">
+                <!--Setter Property="FontSize" Value="24"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="Black"/-->
+            </Style>
 
+            <Style x:Key="SubHeadline" TargetType="Label">
+                <!--Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="Gray"/-->
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
@@ -31,7 +44,13 @@
                 Clicked="ToAddNewWordPage"
                 HorizontalOptions="Fill"
                 />
-
+            <Button
+                x:Name="ToDictionaryPageBttn"
+                SemanticProperties.Hint="Show all words"
+                Text="Dictionary"
+                Clicked="ToDictionaryPage"
+                HorizontalOptions="Fill"
+                />
             <Button
                 x:Name="ExitBttn"
                 Text="Close this app" 

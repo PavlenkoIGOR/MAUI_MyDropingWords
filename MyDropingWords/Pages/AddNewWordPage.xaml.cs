@@ -1,14 +1,18 @@
+using MyDropingWords.Services.SQLServices;
+
 namespace MyDropingWords.Pages;
 
 public partial class AddNewWordPage : ContentPage
 {
-	public AddNewWordPage()
+	DBService DBService { get; set; }
+    public AddNewWordPage(DBService dB)
 	{
 		InitializeComponent();
+		DBService = dB;
 	}
 
 	async void AddNewWordToDictionary(object sender, EventArgs e)
 	{
-		await Navigation.PushAsync(new AddNewWordPage());
+		//await 
 	}
 }
